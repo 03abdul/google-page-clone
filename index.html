@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Google Clone</title>
+    <meta name="description" content="A Google homepage clone built with Tailwind CSS.">
+    <title>Google</title>
 
 </head>
 
-<body>
+<body class="font-[Arial,sans-serif] text-[#202124] bg-white min-h-screen flex flex-col">
     <!-- Header -->
-    <div class="flex justify-between text-sm px-3 py-5">
-        <div class="space-x-4 pl-4">
-            <span class="hover:underline hover:cursor-pointer">About</span>
-            <span class="hover:underline hover:cursor-pointer">Store</span>
+    <div class="flex justify-between items-center gap-4 text-[13px] px-3 sm:px-4 py-3 h-[60px]">
+        <div class="flex gap-3 sm:gap-4 pl-1 sm:pl-4 whitespace-nowrap">
+            <a href="https://about.google/" class="hover:underline">About</a>
+            <a href="https://store.google.com/" class="hover:underline">Store</a>
         </div>
-        <div class="space-x-3">
-            <span class="hover:underline hover:cursor-pointer tracking-tight">Gmail</span>
-            <span class="hover:underline hover:cursor-pointer tracking-tight">Images</span>
+        <div class="flex items-center gap-2 sm:gap-3 whitespace-nowrap shrink-0">
+            <a href="https://mail.google.com/" class="hover:underline tracking-tight">Gmail</a>
+            <a href="https://www.google.com/imghp" class="hover:underline tracking-tight">Images</a>
 
             <span class="group relative">
                 <span class="hover:bg-gray-200 hover:cursor-pointer px-1 py-2 rounded-full">
@@ -29,8 +30,7 @@
                         <path
                             d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
                         </path>
-                        <image src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt=""
-                            style="border:none;display:none \9"></image>
+
                     </svg>
                 </span>
                 <span
@@ -38,15 +38,16 @@
                     apps</span>
             </span>
 
-            <span
-                class="bg-blue-700 px-5 py-2.5 rounded-full text-white text-md hover:cursor-pointer hover:shadow-2xl">Sign
-                in</span>
+            <a href="https://accounts.google.com/"
+                class="bg-[#0b57d0] hover:bg-[#0a4db8] px-4 sm:px-6 py-2.5 rounded-full text-white text-sm font-medium hover:shadow-md">Sign
+                in</a>
         </div>
     </div>
     <!-- Google Logo -->
     <div>
-        <div class="flex justify-center -mt-1">
-            <svg class="lnXdpd" height="92" viewBox="0 0 272 92" width="272" xmlns="http://www.w3.org/2000/svg">
+        <div class="flex justify-center mt-[12vh] sm:mt-[15vh]">
+            <svg role="img" aria-label="Google" class="w-[272px] h-[92px]" viewBox="0 0 272 92"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z"
                     fill="#EA4335"></path>
@@ -66,128 +67,127 @@
             </svg>
         </div>
     </div>
-    <!-- Input Fiels -->
-    <div class="mx-5 hover:drop-shadow-lg">
-        <div
-            class="flex justify-center outline-1 mx-auto py-1 outline-gray-300 mt-7 shadow-lg gap-4 items-center rounded-full md:w-1/2">
-            <svg class="w-8 h-8 fill-gray-400 ml-3" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                </path>
-            </svg>
-            <input type="text" class="outline-0 w-full">
-
-            <span class="w-10 h-10 flex items-center cursor-pointer relative group">
-                <svg class="fill-gray-600" focusable="false" viewBox="0 -960 960 960"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill="var(--bbQxAb)"
-                        d="M480-400q-50 0-85-35t-35-85v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q0 50-35 85t-85 35Zm-40 280v-123q-104-14-172-93t-68-184h80q0 83 58.5 141.5T480-320q83 0 141.5-58.5T680-520h80q0 105-68 184t-172 93v123h-80Z">
-                    </path>
-                </svg>
-                <span
-                    class="whitespace-nowrap text-[11px] font-semibold bg-gray-800 text-white p-1 absolute hidden group-hover:block transform translate-y-10 -translate-x-7">Search
-                    by voice</span>
-            </span>
-
-            <span class="w-10 h-10 flex items-center cursor-pointer relative group">
-                <svg class="fill-gray-600" focusable="false" viewBox="0 -960 960 960"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill="var(--bbQxAb)"
-                        d="M480-320q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm240 160q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160Zm-440 40q-66 0-113-47t-47-113v-80h80v80q0 33 23.5 56.5T280-200h200v80H280Zm480-320v-160q0-33-23.5-56.5T680-680H280q-33 0-56.5 23.5T200-600v120h-80v-120q0-66 47-113t113-47h80l40-80h160l40 80h80q66 0 113 47t47 113v160h-80Z">
-                    </path>
-                </svg>
-                <span
-                    class="whitespace-nowrap text-sm text-[11px] font-semibold bg-gray-800 text-white p-1 absolute hidden group-hover:block transform translate-y-10 -translate-x-7">Search
-                    by image</span>
-            </span>
-            <div class="bg-gray-100 mr-4 px-2 py-1 rounded-full whitespace-nowrap">
-                <svg focusable="false" class="inline w-5" xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
-                    <g>
-                        <rect fill="none" height="24" width="24"></rect>
-                    </g>
-                    <g>
-                        <g>
+    <!-- Search form -->
+    <form id="search-form" action="https://www.google.com/search" method="get" role="search"
+        class="mx-4 mt-6 flex justify-center">
+        <div class="relative w-full max-w-[584px] h-[46px]">
+            <div id="card"
+                class="absolute inset-x-0 top-0 z-20 bg-white border border-[#dfe1e5] rounded-3xl hover:shadow-[0_1px_6px_rgba(32,33,36,.28)] hover:border-transparent focus-within:shadow-[0_1px_6px_rgba(32,33,36,.28)] focus-within:border-transparent">
+                <div class="flex items-center h-[44px] px-4 gap-3">
+                    <svg class="w-5 h-5 fill-[#9aa0a6] shrink-0" focusable="false" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                        </path>
+                    </svg>
+                    <input type="text" name="q" id="search-input" class="outline-0 w-full text-base" aria-label="Search"
+                        autocomplete="off" autocapitalize="off" spellcheck="false" autofocus>
+                    <button type="button" aria-label="Search by voice"
+                        class="w-6 h-6 shrink-0 cursor-pointer relative group">
+                        <svg class="fill-[#4285f4]" viewBox="0 -960 960 960" aria-hidden="true">
+                            <path
+                                d="M480-400q-50 0-85-35t-35-85v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q0 50-35 85t-85 35Zm-40 280v-123q-104-14-172-93t-68-184h80q0 83 58.5 141.5T480-320q83 0 141.5-58.5T680-520h80q0 105-68 184t-172 93v123h-80Z">
+                            </path>
+                        </svg>
+                        <span
+                            class="whitespace-nowrap text-xs bg-gray-700 text-white px-2 py-1 rounded absolute hidden group-hover:block top-8 left-1/2 -translate-x-1/2">Search
+                            by voice</span>
+                    </button>
+                    <button type="button" aria-label="Search by image"
+                        class="w-6 h-6 shrink-0 cursor-pointer relative group">
+                        <svg class="fill-[#4285f4]" viewBox="0 -960 960 960" aria-hidden="true">
+                            <path
+                                d="M480-320q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm240 160q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160Zm-440 40q-66 0-113-47t-47-113v-80h80v80q0 33 23.5 56.5T280-200h200v80H280Zm480-320v-160q0-33-23.5-56.5T680-680H280q-33 0-56.5 23.5T200-600v120h-80v-120q0-66 47-113t113-47h80l40-80h160l40 80h80q66 0 113 47t47 113v160h-80Z">
+                            </path>
+                        </svg>
+                        <span
+                            class="whitespace-nowrap text-xs bg-gray-700 text-white px-2 py-1 rounded absolute hidden group-hover:block top-8 left-1/2 -translate-x-1/2">Search
+                            by image</span>
+                    </button>
+                    <button type="button"
+                        class="hidden sm:flex items-center gap-1 bg-[#f1f3f4] hover:bg-[#e8eaed] px-3 py-1.5 rounded-full whitespace-nowrap cursor-pointer">
+                        <svg class="w-5 h-5 fill-[#3c4043]" viewBox="0 0 24 24" aria-hidden="true">
                             <path
                                 d="M17.5 12c0-3.04 2.46-5.5 5.5-5.5-3.04 0-5.5-2.46-5.5-5.5 0 3.04-2.46 5.5-5.5 5.5 3.04 0 5.5 2.46 5.5 5.5z">
                             </path>
                             <path
                                 d="M15.65 11.58c.18-.5.27-1.03.31-1.58h-2c-.1 1.03-.51 1.93-1.27 2.69-.88.87-1.94 1.31-3.19 1.31C7.03 14 5 12.07 5 9.5 5 7.03 6.93 5 9.5 5c.46 0 .89.08 1.3.2l1.56-1.56C11.5 3.22 10.55 3 9.5 3 5.85 3 3 5.85 3 9.5S5.85 16 9.5 16c.56 0 2.26-.06 3.8-1.3l6.3 6.3 1.4-1.4-6.3-6.3c.4-.5.72-1.08.95-1.72z">
                             </path>
-                        </g>
-                    </g>
-                </svg>
-                <span class="text-sm">AI Mode</span>
+                        </svg>
+                        <span class="text-sm text-[#3c4043]">AI Mode</span>
+                    </button>
+                </div>
+                <!-- Dropdown -->
+                <div id="dropdown"
+                    class="hidden max-h-[50vh] overflow-y-auto border-t border-[#e8eaed] mx-4 pt-2 pb-3 text-[15px] text-[#202124]"
+                    role="listbox" aria-label="Trending searches">
+                    <div class="px-5 pb-1 text-sm font-semibold text-[#70757a]">Trending searches</div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>tehran official trailer john
+                            abraham</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>haryana htet answer key</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>bihar jeevika exam
+                            syllabus</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>happy national girlfriends
+                            day</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>knowledge realty trust reit
+                            ipo gmp</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>tum se tum tak drama</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>anupama episode 1727 full
+                            episode</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>blue line metro
+                            bangalore</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>electoral voter list</span>
+                    </div>
+                    <div class="suggestion flex items-center gap-3 px-5 py-1.5 cursor-pointer hover:bg-gray-100"
+                        role="option">
+                        <i class="fa-solid fa-arrow-trend-up text-gray-400 w-4"></i><span>pakistan afghanistan uae tri
+                            series</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Dropdown -->
-     <div id="dropdown" class="hidden">
-    <div class="ml-8 mt-3 text-sm shadow-lg pl-4 pb-3 flex justify-center">
-        <div class="w-full md:w-1/2">
-            <div>
-                <span class="text-sm p-1 text-gray-500 font-semibold">Trending searches</span>
-            </div>
-            <div class="flex flex-col text-[15px] text-gray-800 mt-2">
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">tehran official trailer john abraham</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">haryana htet answer key</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">bihar jeevika exam syllabus</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">happy national girlfriends day</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">knowledge realty trust reit ipo gmp</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">tum se tum tak drama</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">anupama episode 1727 full episode</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">blue line metro bangalore</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">electoral voter list</span>
-                </div>
-                <div class="hover:bg-gray-100 p-1 hover:cursor-pointer">
-                    <i class="fa-solid fa-arrow-trend-up text-gray-400"></i>
-                    <span class="pl-2">pakistan afghanistan uae tri series</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
+    </form>
     <!-- Buttons -->
-    <div class="mt-8 flex justify-center text-[14px] text-gray-700 gap-4">
-        <button class="bg-gray-100 px-5 py-1.5 rounded hover:ring-1 ring-gray-300 hover:shadow-md cursor-pointer">Google
+    <div class="mt-[29px] flex justify-center gap-3">
+        <button type="submit" form="search-form"
+            class="bg-[#f8f9fa] border border-[#f8f9fa] hover:border-[#dadce0] hover:shadow-sm text-[#3c4043] text-sm h-9 px-4 rounded cursor-pointer">Google
             Search</button>
-        <button class="bg-gray-100 px-5 py-1.5 rounded hover:ring-1 ring-gray-300 hover:shadow-md cursor-pointer">I'm
+        <button type="submit" form="search-form" name="btnI" value="1"
+            class="bg-[#f8f9fa] border border-[#f8f9fa] hover:border-[#dadce0] hover:shadow-sm text-[#3c4043] text-sm h-9 px-4 rounded cursor-pointer">I'm
             Feeling
             Lucky</button>
     </div>
     <!-- Languages -->
-    <div class="mt-12">
-        <div class="text-sm flex justify-center">
-            <span class="pr-1 tracking-tighter text-gray-700">Google offered in:</span>
-            <div class="text-blue-900 flex gap-1 text-[13px]">
+    <div class="mt-8 px-4 pb-10">
+        <div class="text-[13px] flex flex-wrap justify-center gap-1">
+            <span class="pr-1 text-[#4d5156]">Google offered in:</span>
+            <div class="text-[#1a0dab] flex flex-wrap gap-2 text-[13px]">
                 <span class="hover:cursor-pointer hover:underline">हिन्दी</span>
                 <span class="hover:cursor-pointer hover:underline">বাংলা</span>
                 <span class="hover:cursor-pointer hover:underline">తెలుగు</span>
@@ -201,15 +201,15 @@
         </div>
     </div>
     <!-- Footer -->
-    <div class="w-full flex flex-col fixed bottom-0 bg-gray-100">
-        <div class="border-b-1 border-gray-300 text-gray-900 px-7 py-3">India</div>
-        <div class="flex text-[14.5px] gap-2 py-3 justify-around md:justify-between">
-            <div class="flex space-x-7 text-gray-800 md:px-10">
+    <div class="w-full flex flex-col mt-auto bg-[#f2f2f2] text-[#70757a]">
+        <div class="border-b border-[#dadce0] text-[15px] px-7 py-3">India</div>
+        <div class="flex flex-wrap text-[14.5px] gap-x-2 gap-y-1 py-3 justify-center md:justify-between">
+            <div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-7 text-[#70757a] md:px-10">
                 <div class="cursor-pointer hover:underline">Advertising</div>
                 <div class="cursor-pointer hover:underline">Business</div>
                 <div class="cursor-pointer hover:underline">How Search works</div>
             </div>
-            <div class="flex space-x-7 text-gray-800 -ml-20 md:px-10">
+            <div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-7 text-[#70757a] md:px-10">
                 <div class="cursor-pointer hover:underline">Privacy</div>
                 <div class="cursor-pointer hover:underline">Terms</div>
                 <div class="cursor-pointer hover:underline">Settings</div>
@@ -218,23 +218,55 @@
     </div>
 
     <script>
-
-        const input = document.querySelector("input");
+        const form = document.getElementById("search-form");
+        const input = document.getElementById("search-input");
         const dropdown = document.getElementById("dropdown");
 
-        input.addEventListener("focus", () => {
+        const open = () => {
             dropdown.classList.remove("hidden");
-            document.body.style.overflow = "hidden";
+        };
+        const close = () => {
+            setActive(-1);
+            dropdown.classList.add("hidden");
+        };
+
+        input.addEventListener("focus", open);
+        input.addEventListener("blur", close);
+        const items = [...dropdown.querySelectorAll(".suggestion")];
+        let active = -1;
+        const setActive = (i) => {
+            items.forEach((el, n) => {
+                el.classList.toggle("bg-gray-100", n === i);
+                el.setAttribute("aria-selected", n === i);
+            });
+            active = i;
+            if (i >= 0) input.value = items[i].textContent.trim();
+        };
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") input.blur();
+            else if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+                e.preventDefault();
+                open();
+                const step = e.key === "ArrowDown" ? 1 : -1;
+                setActive((active + step + items.length) % items.length);
+            }
+        });
+        input.addEventListener("input", () => setActive(-1));
+
+        // mousedown fires before blur; preventing default keeps focus so the click registers
+        dropdown.addEventListener("mousedown", (e) => e.preventDefault());
+        dropdown.addEventListener("click", (e) => {
+            const item = e.target.closest(".suggestion");
+            if (!item) return;
+            input.value = item.textContent.trim();
+            form.submit();
         });
 
-        input.addEventListener("blur", () => {
-            setTimeout(() => {
-                dropdown.classList.add("hidden");
-                document.body.style.overflow = "auto";
-            }, 200);
+        // Don't submit empty searches (the Lucky button still works)
+        form.addEventListener("submit", (e) => {
+            if (!input.value.trim()) e.preventDefault();
         });
-
-
     </script>
 
 </body>
