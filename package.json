@@ -2,8 +2,8 @@
   "name": "google-page-clone",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./input.css -o ./output.css --minify",
-    "dev": "tailwindcss -i ./input.css -o ./output.css --watch"
+    "build": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./input.css -o ./output.css --minify",
+    "dev": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./input.css -o ./output.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
